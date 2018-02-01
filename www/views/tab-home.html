@@ -1,6 +1,6 @@
 <ion-view id="tab-home" show-tabs>
   <ion-nav-bar class="bar-royal">
-    <ion-nav-title><span class="nav-bar-title textlogo"><span class="moon-symbol"></span>itcoin.com Wallet</span></ion-nav-title>
+    <ion-nav-title><span class="nav-bar-title textlogo"><img src="img/app/logo-negative.svg" class="wallet-logo"></span></ion-nav-title>
   </ion-nav-bar>
 
   <ion-content>
@@ -33,7 +33,7 @@
         </i>
       </div>
       <div class="title" translate>
-        Your bitcoin wallet is ready!
+        Your wallet is ready!
       </div>
       <div class="subtitle" translate>
         On this screen you can see all your wallets, accounts, and assets.
@@ -65,8 +65,36 @@
 
     <div class="list card">
       <div class="item item-icon-right item-heading">
-        <img class="wallet-coin-logo" src="img/bitcoin-cash-logo.svg" width="22">
         <span translate>Bitcoin Cash (BCH)</span>
+        <a ui-sref="tabs.add({coin:'bch'})"><i class="icon ion-ios-plus-empty list-add-button"></i></a>
+      </div>
+      <div>
+        <a ng-repeat="wallet in walletsBch track by $index"
+           class="item item-sub item-icon-left item-big-icon-left item-icon-right wallet"
+           ng-click="openWallet(wallet)">
+          <span ng-include="'views/includes/walletList.html'"></span>
+        </a>
+      </div>
+    </div>
+
+<!--     <div class="list card">
+      <div class="item item-icon-right item-heading">
+        <img class="wallet-coin-logo" src="img/icon-bitcoin.svg" width="18">
+        <span translate>Bitcoin Core (BTC)</span>
+        <a ui-sref="tabs.add"><i class="icon ion-ios-plus-empty list-add-button"></i></a>
+      </div>
+      <div>
+        <a ng-repeat="wallet in walletsBtc track by $index"
+           class="item item-sub item-icon-left item-big-icon-left item-icon-right wallet"
+           ng-click="openWallet(wallet)">
+          <span ng-include="'views/includes/walletList.html'"></span>
+        </a>
+      </div>
+    </div> -->
+
+    <div class="list card">
+      <div class="item item-icon-right item-heading">
+        <span translate>Ethereum (ETH)</span>
         <a ui-sref="tabs.add({coin:'bch'})"><i class="icon ion-ios-plus-empty list-add-button"></i></a>
       </div>
       <div>
@@ -80,8 +108,21 @@
 
     <div class="list card">
       <div class="item item-icon-right item-heading">
-        <img class="wallet-coin-logo" src="img/icon-bitcoin.svg" width="18">
-        <span translate>Bitcoin Core (BTC)</span>
+        <span translate>LiteCoin (LTC)</span>
+        <a ui-sref="tabs.add"><i class="icon ion-ios-plus-empty list-add-button"></i></a>
+      </div>
+      <div>
+        <a ng-repeat="wallet in walletsBtc track by $index"
+           class="item item-sub item-icon-left item-big-icon-left item-icon-right wallet"
+           ng-click="openWallet(wallet)">
+          <span ng-include="'views/includes/walletList.html'"></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="item item-icon-right item-heading">
+        <span translate>RaiBlocks (XRB)</span>
         <a ui-sref="tabs.add"><i class="icon ion-ios-plus-empty list-add-button"></i></a>
       </div>
       <div>
@@ -96,7 +137,7 @@
     <div class="ng-hide list card" ng-show="walletsBtc[0] && bitpayCardItems.length>0" ng-include="'views/includes/bitpayCardsCard.html'"></div>
     <div class="ng-hide list card" ng-show="walletsBtc[0] && buyAndSellItems.length>0" ng-include="'views/includes/buyAndSellCard.html'"></div>
     <div class="ng-hide list card" ng-show="homeIntegrations.length>0" ng-include="'views/includes/homeIntegrations.html'"></div>
-    <div class="ng-hide list card" ng-show="nextStepsItems.length>0 && !isWindowsPhoneApp" ng-include="'views/includes/nextSteps.html'"></div>
+<!--     <div class="ng-hide list card" ng-show="nextStepsItems.length>0 && !isWindowsPhoneApp" ng-include="'views/includes/nextSteps.html'"></div> -->
     <div class="ng-hide list card" ng-show="showServices && (walletsBch[0] || walletsBtc[0])" ng-include="'views/includes/services.html'"></div>
 
   </ion-content>

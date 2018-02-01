@@ -27,6 +27,64 @@
 body {
     font-family:'ProximaNova' !important;
 }
+.tabs{
+    border-color: #fff;
+    background-color: #fff;
+  background-image: none;
+  color: #009688;
+}
+.tabs .tab-item {
+    overflow: visible;
+}
+.tabs .tab-item .icon.ico-scan,
+.tabs .tab-item .icon.ico-scan-selected{
+  height: 60px;
+  margin-top: -32px;
+}
+
+.bar.bar-royal .title {
+  color: #58b5ab;
+}
+.back-button .icon:before {
+  color: #333 !important;
+  font-size: 30px !important;
+}
+
+
+.bar.bar-royal {
+    background-color: #fff;
+    border-color: #fff;
+    background-image: none;
+    border:0;
+}
+
+#view-add .add-type,
+#tab-home .homeTip > .title,
+#tab-home .homeTip > .subtitle {
+  color: #454545;
+}
+#success-message {
+    color:#fff;
+}
+
+.pane, .view, .card, .item {
+  color: #009688!important;
+  background-color: #fff;
+}
+
+.item.active, .item.activated, .item-complex.active .item-content, .item-complex.activated .item-content, .item .item-content.active, .item .item-content.activated {
+  background-color: #f5f5f5;
+}
+
+.card, .list-inset {
+    margin:0;
+    border-radius: 0;
+    border-bottom: 0px;
+}
+
+.list {
+    margin:0;
+}
 
 .textlogo {
     color: #FFF;
@@ -34,18 +92,39 @@ body {
     font-weight: 400;
     font-family: 'Montserrat';
     line-height: 50px;
-    margin-left: 20px;
     letter-spacing: -0.02em;
     position: relative;
-    top: -4px;
+}
+
+.big-icon-svg > .bg {
+  box-shadow: 0 0 0 0;
+  height: 50px;
+  width: 50px;
+  background-size: 70%;
+  border-radius: 50%;
+}
+
+.item-icon-left .icon {
+
+}
+
+/* wallet logo */
+.wallet-logo {
+    padding-top:8px;
+    width:125px;
+    display: inline-block;
 }
 
 .textlogo .moon-symbol {
-    color: #fab915;
+    color: #ff0164;
     margin-right: 1px;
     position: relative;
     top: 1px;
 }
+.back-button .icon:before {
+  color: #F5F5F5;
+}
+
 
 .bg.icon-bitcoincom:before {
         content: "\e904";
@@ -64,7 +143,7 @@ body {
     padding-top: 8px;
     padding-left: 11px;
     background-color: #494949;
-    color: #fab915;
+    color: #ff0164;
 }
 
 .bg.icon-buy-bitcoin2:before {
@@ -92,12 +171,11 @@ body {
     padding-top: 0px;
     padding-left: 2px;
     background-color: #494949;
-    color: #fab915;
+    color: #ff0164;
     font-size: 36px;
 }
 
 ion-header-bar.bar-royal {
-    background-color: #000 !important;
     border-bottom-style: solid;
     border-bottom-width: 4px;
 }
@@ -135,11 +213,11 @@ div.onboarding-topic {
 }
 
 #email-form button {
-    background: #fab915 !important;
+    background: #ff0164 !important;
 }
 
 .big-icon-svg > .bg.green {
-   background: #fab915 !important;
+   background: #ff0164 !important;
 }
 
 button.button.button-secondary {
@@ -160,15 +238,15 @@ button.button.button-secondary {
     transition: background-color .2s ease-in-out;
     padding: 7%;
     margin: 5%;
-    border: 1px solid #fab915;
+    border: 1px solid #ff0164;
 }
 
 #pin .filled-Bitcoin\.com {
-    background-color: #fab915;
+    background-color: #ff0164;
 }
 
 div.slide-success__background.fill-screen {
-    background-color: #fab915 !important;
+    background-color: #ff0164 !important;
 }
 
 .chart-container {

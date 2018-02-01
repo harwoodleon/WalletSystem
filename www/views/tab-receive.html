@@ -41,6 +41,12 @@
           </div>
         </div>
         <div>
+          <button ng-show="addr" class="button-request" style="color:#333; font-size:1.3em;border: 1px solid #333;border-radius: 4px;padding: 8px;" ng-click="requestSpecificAmount()">
+            <span translate>Request Specific amount</span>
+            <i class="icon ion-ios-arrow-right"></i>
+          </button>
+        </div>
+        <div>
           <button ng-show="addr && wallet.coin == 'bch' && bchAddressType != 'cashaddr'" class="button-address" ng-click="displayAddress('cashaddr')">
             <span translate>Display new style address</span>
           </button>
@@ -53,12 +59,6 @@
         <div>
           <button ng-show="addr && wallet.coin == 'bch' && bchAddressType != 'bitpay'" class="button-address" ng-click="displayAddress('bitpay')">
             <span translate>Display BitPay address</span>
-          </button>
-        </div>
-        <div>
-          <button ng-show="addr" class="button-request" ng-click="requestSpecificAmount()">
-            <span translate>Request Specific amount</span>
-            <i class="icon ion-ios-arrow-right"></i>
           </button>
         </div>
         <div>
